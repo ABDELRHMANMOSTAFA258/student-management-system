@@ -1,0 +1,16 @@
+Project Structure:
+
+html/index.html: The main HTML file containing the structure of the student management system webpage.
+css/index.css: The CSS file providing styles for the HTML elements.
+
+
+Technologies Used:
+HTML
+CSS
+JS
+
+project topic:
+student management system
+
+
+Feel free to explore the code!

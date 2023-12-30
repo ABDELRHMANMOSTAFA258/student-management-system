@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Include the JavaScript file with defer attribute for deferred execution -->
+    <script src="Main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <!-- Navigation section -->
+    <nav>
+        <a href="#add-course">Add Course</a>
+        <a href="#select-course">Select Course</a>
+        <a href="#add-student">Add Student and Scores</a>
+        <a href="#manage-students">Manage Students</a>
+        <a href="#search-scores">Search for Student Scores</a>
+        <a href="#view-failed">View Failed Students</a>
+        <a href="#view-passed">View Passed Students</a>
+    </nav>
+
+    <!-- Add Course section -->
+    <section class="section" id="add-course">
+        <h2>Add Course and Set Grading Scale</h2>
+        <!-- Form for adding a new course -->
+        <form class="form">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" name="courseName" required>
+
+            <label for="gradingScale">Grading Scale:</label>
+            <input type="text" id="gradingScale" name="gradingScale" required>
+
+            <button type="submit">Add Course</button>
+        </form>
+    </section>
+
+    <!-- Select Course section -->
+    <section class="section" id="select-course">
+        <h2>Select Course</h2>
+        <!-- Dropdown to select a course -->
+        <select id="courses">
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3</option>
+        </select>
+    </section>
+
+    <!-- Add Student section -->
+    <section class="section" id="add-student">
+        <h2>Add Student and Scores</h2>
+        <!-- Form for adding a new student -->
+        <form class="form">
+            <label for="studentID">ID:</label>
+            <input type="text" id="studentID" name="studentID" required>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studentSurname">Student Surname:</label>
+            <input type="text" id="studentSurname" name="studentSurname" required>
+
+            <label for="midtermScore">Midterm Score:</label>
+            <input type="text" id="midtermScore" name="midtermScore" required>
+
+            <label for="finalScore">Final Score:</label>
+            <input type="text" id="finalScore" name="finalScore" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <!-- View Student Scores section -->
+    <section class="section" id="manage-students">
+        <h2>View Student Scores</h2>
+        <!-- Table to display student scores -->
+        <table id="studentScoresTable">
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Student Surname</th>
+                <th>Total Score</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+            <!-- Table rows will be added here -->
+        </table>
+    </section>
+
+    <!-- Search for Student Scores section -->
+    <section class="section" id="search-scores">
+        <h2>Search for Student Scores</h2>
+        <!-- Form for searching student scores -->
+        <form class="form">
+            <label for="searchStudentName">Student Name:</label>
+            <input type="text" id="searchStudentName" name="searchStudentName" required>
+            <button type="submit">Search</button>
+        </form>
+        <!-- Table to display searched scores -->
+        <table id="searchedScoresTable">
+            <tr>
+                <th>Course Name</th>
+                <th>Total Score</th>
+                <th>Grade</th>
+            </tr>
+            <!-- Table rows for searched scores will be added here -->
+        </table>
+    </section>
+
+    <!-- Filtered Students section -->
+    <section class="section" id="view-passed">
+        <h2>Filtered Students</h2>
+        <!-- Container for Passed and Failed Students tables -->
+            <table class="filtered-table">
+                <!-- Passed Students table -->
+                <h3>Passed Students</h3>
+                <table id="passedStudents">
+                    <tr>
+                        <th>Course name</th>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                    </tr>
+                    <!-- Table rows will be added here -->
+                </table>
+            </section>
+
+            <!-- Failed Students table -->
+            <section class="section" id="view-failed">
+                <h3>Failed Students</h3>
+                <table id="failedStudents">
+                    <tr>
+                        <th>Course name</th>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                    </tr>
+                    <!-- Table rows will be added here -->
+                </table>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        &copy; 2023 Student Management System
+    </footer>
+</body>
+
+</html>
